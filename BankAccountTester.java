@@ -8,9 +8,22 @@ public class BankAccountTester
     System.out.println(Rickey.getAccountID() + " should be 12345");
     System.out.println(Rick.getBalance() + " should be 0.0");
     System.out.println(Rick.getAccountID() + " should be 67890");
-    System.out.println(Rickey.toString() + " should be 12345  0.0");
+    System.out.println(Rickey.toString() + " should be 12345\t0.0");
     System.out.println(Rickey.deposit(500) + " should be true");
     System.out.println(Rickey.withdraw(250) + " should be true");
-    System.out.println(Rickey.toString() + " should be 12345  250.0");
+    System.out.println(Rickey.toString() + " should be 12345\t250.0");
+    System.out.println(Rickey.deposit(100.5) + " should be true");
+    System.out.println(Rickey.toString() + " should be 12345\t350.5");
+    System.out.println(Rickey.withdraw(100.1) + " should be true");
+    System.out.println(Rickey.toString() + " should be 12345\t250.4");
+    System.out.println(Rick.toString() + " should be 67890\t0.0");
+    System.out.println(Rick.withdraw(100) + " should be false");
+    System.out.println(Rick.deposit(0) + " should be true");
+    System.out.println(Rick.deposit(100) + " should be true");
+    System.out.println(Rick.withdraw(200) + " should be false");
+    System.out.println(Rick.withdraw(100) + " should be true");
+    System.out.println(Rick.toString() + " should be 67890\t0.0");
+    System.out.println(Rick.deposit(257.98) + " should be true");
+    System.out.println(Rick.toString() + " should be 67890\t257.98");
   }
 }
