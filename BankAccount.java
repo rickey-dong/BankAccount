@@ -49,4 +49,8 @@ public class BankAccount
   {
     return "#" + accountID + "\t$" + balance;
   }
+  private boolean authenticate(String password)
+  {
+    return (this.password == password);
+  }
 }
