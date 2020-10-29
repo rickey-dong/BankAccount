@@ -55,7 +55,7 @@ public class BankAccount
   }
   public boolean transferTo(BankAccount other, double amount, String password)
   {
-    if (this.authenticate(password) && withdraw(amount))
+    if (this.authenticate(password) && this.withdraw(amount))
     {
       if (other.deposit(amount))
       {
@@ -63,7 +63,7 @@ public class BankAccount
       }
       else
       {
-        System.out.println("Error");
+        System.out.println("Error. This will literally never happen.");
       }
     }
     return false;
